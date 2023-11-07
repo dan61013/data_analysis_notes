@@ -10,7 +10,7 @@ Table of contents
 
 ## Data Preprocessing
 
-1. 檢查特殊字元及置換
+1. [檢查特殊字元及置換](./src/special_char.py)
 
 ## 相關分析
 
