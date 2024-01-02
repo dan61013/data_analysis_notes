@@ -14,7 +14,7 @@ Table of contents
 
 1. [檢查特殊字元及置換](./src/special_char.py)
 2. [迴圈製作折線圖](./test/data_visualization_line_chart.py)
-3. [資料清理與串接]("./test/data_cleasing_01.py)
+3. [資料清理與串接](./test/data_cleasing_01.py)
 
 ## 相關分析
 
