@@ -17,6 +17,7 @@ Table of contents
 已完成(歸檔於`./src`):
 
 1. [檢查特殊字元及置換](./src/special_char.py): 應用於姓名特殊字元的置換作業。
+2. [製作多組測試數據的溫度-時間變化折線圖](./src/temperature_variation.py)
 
 待整理(歸檔於`./test`):
 
