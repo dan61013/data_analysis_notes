@@ -103,7 +103,7 @@ def main():
                      label=inschool_list[4])
         else:
             pass
-        
+
         # 設定圖表標題、XY軸標題
         ax.set_title(dept)
         ax.set_xlabel("就讀年級")
@@ -111,7 +111,7 @@ def main():
         # Reference: https://blog.csdn.net/humingzhu_97/article/details/104899572
         ax.legend()  # loc="upper left"
         # plt.show()
-        
+
         # 儲存PNG
         plt.savefig(f"./output/data_visualization/{dept}.png")
 

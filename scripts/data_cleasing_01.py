@@ -1,5 +1,5 @@
 """
-data_cleansing_01: 清理學生修課資料與成績，並和學生基本資料合併。
+data_cleansing_01: 篩選學生修課資料與成績，並和基本資料合併。
 """
 
 import numpy as np
@@ -33,10 +33,10 @@ def main():
     df.insert(0, "入學年度", inschool)
     df["入學年度"] = df["入學年度"].astype(str)
 
-    # filter 入學年度 107 to 109
+    # filter: 入學年度 107 to 109
     df = df[df["入學年度"].isin(["107", "108", "109"])]
 
-    # 更改入學方式名稱
+    # 調整入學方式字串
     df["入學方式"] = df["入學方式"].replace(
             {
                 "推薦甄試": "甄選入學",
