@@ -60,6 +60,6 @@ Example: 依據學生英文能力分為2組，並分析2組學生修讀EMI課程
 
 主要公式: $y=\beta_0+\beta_1x$
 
-自我練習: [實作Scatter & 繪製預測線]('./practice/linear_regression/main.py')
+自我練習: [實作Scatter & 繪製預測線](./practice/linear_regression/main.py)
 
 ![Sales By Customer Traffic](./practice/linear_regression/plot.png)
