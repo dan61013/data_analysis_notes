@@ -1,5 +1,9 @@
 # Data Analysis Notes
 
+Link:
+
+- [Supported TeX/LaTeX commands](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)
+
 Table of contents:
 
 - [Data Analysis Notes](#data-analysis-notes)
@@ -9,6 +13,7 @@ Table of contents:
   - [學習成效分析](#學習成效分析)
   - [相關分析](#相關分析)
     - [Pearson product-moment correlation coefficient](#pearson-product-moment-correlation-coefficient)
+  - [Linear Regression](#linear-regression)
 
 ## Data Preprocessing
 
@@ -48,3 +53,13 @@ Example: 依據學生英文能力分為2組，並分析2組學生修讀EMI課程
 - 代表兩個變數之間(X & Y)之間的線性關係。
 - 分母不能為`0`，所以資料的標準差若為`0`，則不能帶入此公式。
 - $p=\dfrac{x和y的變異數}{x的標準差*y的標準差}$
+
+## Linear Regression
+
+| Refernce: [學習筆記-線性回歸(Linear Regression)](https://medium.com/@jason8410271027/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E7%B7%9A%E6%80%A7%E5%9B%9E%E6%AD%B8-linear-regression-38b17484ee0a)
+
+主要公式: $y=\beta_0+\beta_1x$
+
+自我練習: [實作Scatter & 繪製預測線]('./practice/linear_regression/main.py')
+
+![Sales By Customer Traffic](./practice/linear_regression/plot.png)
