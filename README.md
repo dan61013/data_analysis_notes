@@ -35,12 +35,35 @@ Table of contents:
 
 ## 學習成效分析
 
-目的: 瞭解不同組別的學生，在學習表現上是否受到具有顯著差異。
+目的: 瞭解不同組別的學生，在特定的課程中，其學習表現是否具有顯著差異。
 
-Example: 依據學生英文能力分為2組，並分析2組學生修讀EMI課程是否具有顯著差異。
+Example: 依據學生英文能力，將每一個學系的學生分為2組，並分析2組學生修讀EMI(全英文授課)之課程是否具有顯著差異。
 
-- 重點: 除了使用成績、平均系排名(換算PR值)等方法以外，需再加入**T-test**進行驗證。
-  - Example: 分析透過**不同入學管道**入學的學生，其學習表現差異情形。
+分析方法: 原先採用**Student's t-test**進行分析，但由於各學系的samples低於30，因此改為依照下列條件進行對應的分析:
+
+1. 當samples >= 30、為常態分布(D'Agostino-Pearson檢驗)，以及levene檢驗之**P-Value >= 0.05**，才進行**Student's t-tes**(`equal_var=True`)。
+2. 當samples >= 30、為常態分布(D'Agostino-Pearson檢驗)，但levene檢驗之**P-Value < 0.05**，則進行**Welch's t-test**(`equal_var=False`)。
+3. 當samples <= 30，則採用**Mann-Whitney U test**。
+
+分析結果(範例)如下，或參考這份[CSV output file](./scripts/output/result.csv)，點擊[這裡](./scripts/emi_analysis.py)查看Script(不包含data preprocessing):
+
+| 學系代碼 | 檢定方法          | Statistic | P-Value | Comparison |
+| :------: | :---------------: | :-------: | :-----: | :--------: |
+|   A001   | Student's t-test  |   -1.04   |  0.301  |    N/A     |
+|   A002   | Mann-Whitney U test |  1286.00  |  0.956  |    N/A     |
+|   A003   | Mann-Whitney U test | 1987.00\* |  0.027  |   B > A    |
+|   A004   | Mann-Whitney U test |  2395.50  |  0.864  |    N/A     |
+|   A005   | Mann-Whitney U test |  2890.00  |  0.164  |    N/A     |
+|   A006   | Mann-Whitney U test |   123.00  |  0.209  |    N/A     |
+|   A007   | Mann-Whitney U test |   351.50  |  0.440  |    N/A     |
+|   A008   | Mann-Whitney U test | 681.50\* |  0.015  |   B > A    |
+|   A009   | Mann-Whitney U test | 150.00\*\*|  0.001  |   B > A    |
+|   A010   | Mann-Whitney U test |   37.50   |  0.788  |    N/A     |
+|   A011   | Mann-Whitney U test |   359.50  |  0.149  |    N/A     |
+|   A012   | Mann-Whitney U test | 296.50\*\*|  0.003  |   B > A    |
+
+- 英文能力定義: B > A 組
+- N/A: 代表P-Value不具有顯著性，因此沒有將兩組學生進行比較。
 
 ## 相關分析
 

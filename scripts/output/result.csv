@@ -1,0 +1,13 @@
+﻿學系代碼,檢定方法,Statistic,P-Value,Comparison
+A001,Student's t-test,-1.04,0.301,N/A
+A002,Mann-Whitney U test,1286.00,0.956,N/A
+A003,Mann-Whitney U test,1987.00*,0.027,B > A
+A004,Mann-Whitney U test,2395.50,0.864,N/A
+A005,Mann-Whitney U test,2890.00,0.164,N/A
+A006,Mann-Whitney U test,123.00,0.209,N/A
+A007,Mann-Whitney U test,351.50,0.440,N/A
+A008,Mann-Whitney U test,681.50*,0.015,B > A
+A009,Mann-Whitney U test,150.00**,0.001,B > A
+A010,Mann-Whitney U test,37.50,0.788,N/A
+A011,Mann-Whitney U test,359.50,0.149,N/A
+A012,Mann-Whitney U test,296.50**,0.003,B > A
