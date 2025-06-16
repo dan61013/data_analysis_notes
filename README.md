@@ -14,6 +14,8 @@ Table of contents:
   - [相關分析](#相關分析)
     - [Pearson product-moment correlation coefficient](#pearson-product-moment-correlation-coefficient)
   - [Linear Regression](#linear-regression)
+  - [Others](#others)
+    - [Git LFS (Large File Storage)](#git-lfs-large-file-storage)
 
 ## Data Preprocessing
 
@@ -86,3 +88,18 @@ Example: 依據學生英文能力，將每一個學系的學生分為2組，並�
 自我練習: [實作Scatter & 繪製預測線](./practice/linear_regression/main.py)
 
 ![Sales By Customer Traffic](./practice/linear_regression/plot.png)
+
+## Others
+
+### Git LFS (Large File Storage)
+
+> 為了解決大檔案無法存放在GitHub上，需存放在LFS儲存空間。
+
+Step:
+
+1. 安裝[Git LFS](https://git-lfs.com/)
+2. 在Project路徑下輸入: `git lfs install`
+3. 指定檔案: `git lfs track "file_path"`，或指定所有類型檔案`git lfs track "*.csv"`
+4. 上述指令會新增一個`.gitattributes`檔案，要add這個檔案`git add .gitattributes`
+5. 進行commit與push
+6. Done.
