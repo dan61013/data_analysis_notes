@@ -14,6 +14,7 @@ Table of contents:
   - [相關分析](#相關分析)
     - [Pearson product-moment correlation coefficient](#pearson-product-moment-correlation-coefficient)
   - [Linear Regression](#linear-regression)
+  - [平均絕對偏差](#平均絕對偏差)
   - [Others](#others)
     - [Git LFS (Large File Storage)](#git-lfs-large-file-storage)
 
@@ -88,6 +89,40 @@ Example: 依據學生英文能力，將每一個學系的學生分為2組，並�
 自我練習: [實作Scatter & 繪製預測線](./practice/linear_regression/main.py)
 
 ![Sales By Customer Traffic](./practice/linear_regression/plot.png)
+
+## 平均絕對偏差
+
+> Mean Absolute Deviation (MAD, AAD -> AverageAD): 用於表示各變量之間的離散程度，可以使用Mean, Median or Mode三種方式。
+
+實作 -> [Jupyter Notebook](./tutorial/Pandas/pd_modifying_data.ipynb):
+
+- Dummy Data -> [學生修課資料與成績](./tutorial/dataset/學生修課資料與成績.csv)，分析每一筆資料的Absolute Deviation，並計算MAD
+
+※ 位於`In [29]`~
+
+Result:
+
+Mean Absolute Deviation: `22.779`
+
+超過MAD的紀錄:
+
+|   學年度 |   學期 | 學號   | 就讀班級   | 課程代碼   |   成績 | 年級   |   Absolute Deviation |
+|---------:|-------:|:-------|:-----------|:-----------|-------:|:-------|---------------------:|
+|      110 |      1 | A2372  | 資訊一甲   | R53862     |     90 | 大一   |                36.81 |
+|      110 |      1 | A8406  | 材料二甲   | R45288     |      6 | 大二   |                47.19 |
+|      110 |      1 | A2950  | 資訊一乙   | R31748     |     16 | 大一   |                37.19 |
+|      110 |      1 | A5486  | 資訊一乙   | R45902     |     25 | 大一   |                28.19 |
+|      110 |      1 | A6658  | 資訊一乙   | R38323     |      8 | 大一   |                45.19 |
+|      110 |      1 | A7583  | 化學三甲   | R37639     |     77 | 大三   |                23.81 |
+|      110 |      1 | A4190  | 資訊二甲   | R45944     |     83 | 大二   |                29.81 |
+|      110 |      1 | A5175  | 資訊二甲   | R40624     |     83 | 大二   |                29.81 |
+|      110 |      1 | A8857  | 資訊二甲   | R31315     |     76 | 大二   |                22.81 |
+|      110 |      1 | A8394  | 化學三甲   | R20756     |     23 | 大三   |                30.19 |
+|      110 |      1 | A7377  | 材料二甲   | R55532     |     77 | 大二   |                23.81 |
+|      110 |      1 | A1607  | 資訊一乙   | R94199     |     80 | 大一   |                26.81 |
+|      110 |      1 | A5407  | 材料二甲   | R40596     |     19 | 大二   |                34.19 |
+|      110 |      1 | A4452  | 材料二甲   | R93028     |     96 | 大二   |                42.81 |
+|      110 |      1 | A5215  | 資訊一乙   | R51908     |     19 | 大一   |                34.19 |
 
 ## Others
 
